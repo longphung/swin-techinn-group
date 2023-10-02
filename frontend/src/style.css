@@ -44,7 +44,7 @@ header {
     align-items: center;
     background-color: #000000; /* Add your desired background color */
     color: #fff; /* Add your desired text color */
-    padding: 20px 50px;
+    padding: 20px 100px;
 }
 #logo {
     font-size: 22px; /* Adjust the font size as needed */
@@ -84,7 +84,7 @@ header {
 
 
 article{
-    padding: 20px 0px;
+    padding: 20px 50px;
  
 }
 #blackbg{
@@ -109,9 +109,25 @@ article{
     text-align: left;
     justify-content: left;
     color:#fff;
-    padding: 20px 0px 20px 40px;
+    padding: 20px 0px 20px 100px;
 
 }
+#regbg{
+    color:black;
+    padding: 20px 100px 20px 50px;
+}
+
+
+#bgimg {
+  
+    background-image: url('2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+  }
+  
+
+  
 /* Styling for the footer */
 footer {
     background-color: black;
@@ -172,6 +188,65 @@ footer {
     box-sizing: border-box;
     background-color: transparent; /* Transparent center */
   }
+
+
+
+  .circleListBlack {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .circleListBlack li {
+    position: relative;
+    padding-left: 20px; /* Adjust as needed for spacing between the circle and text */
+    margin-bottom: 10px; /* Adjust as needed for spacing between list items */
+  }
+
+  .circleListBlack li a{
+    text-decoration: none;
+    color: #000000;
+  }
+  
+  .circleListBlack li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px; /* Adjust the size of the circle */
+    height: 10px; /* Adjust the size of the circle */
+    border: 2px solid #000000; /* Border style, color, and width */
+    border-radius: 50%; /* Makes it a circle */
+    box-sizing: border-box;
+    background-color: transparent; /* Transparent center */
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
   
@@ -274,7 +349,7 @@ a.button {
 }
 
 a.button:hover {
-    background-color: #f49f85; /* Change the background color on hover */
+    background-color: #FF5722; /* Change the background color on hover */
 }
 
 a.white {
