@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "recommend_pages",
+  "info": {
+    "singularName": "recommend-page",
+    "pluralName": "recommend-pages",
+    "displayName": "Recommend Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "body": {
+      "type": "richtext"
+    }
+  }
+}

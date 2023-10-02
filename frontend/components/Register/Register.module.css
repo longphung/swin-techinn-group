@@ -1,0 +1,52 @@
+.registrationContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.registrationForm {
+  width: 30rem;
+  margin: 0 auto;
+  padding: 1.25rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 1rem;
+}
+
+.formButton {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.formButton button {
+  width: 100%;
+}
+
+.registrationForm label {
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+.registrationForm input:not([type="checkbox"]) {
+  padding: 0.5rem;
+  margin: 0.25rem 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 100%;
+}
+
+.registrationForm select {
+  padding: 0.5rem;
+  margin: 0.25rem 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 100%;
+}
