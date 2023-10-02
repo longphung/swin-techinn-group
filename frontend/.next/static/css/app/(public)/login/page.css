@@ -1,0 +1,122 @@
+/*!*******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./components/Button/Button.module.css ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************/
+.Button_button__mg_cR {
+  border-width: 0;
+  display: block;
+  text-decoration: none;
+  background: #ea6c3c;
+  margin: 0;
+  padding: 1rem 2.25rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  box-shadow: 0 10px 10px 0 hsla(355, 100%, 61%, 0.15);
+  border-color: transparent;
+  border-radius: 40px;
+  transition:
+    background 0.3s,
+    transform 0.1s;
+}
+
+.Button_button__mg_cR:hover {
+  background: #ff8b5c;
+  transform: scale(1.05);
+}
+
+.Button_button__mg_cR:active {
+  background: #d94a25; /* Change the background color on click/active state */
+}
+
+.Button_secondary__kYMEY {
+  background: #ffffff;
+  color: #ff5722;
+}
+
+.Button_secondary__kYMEY:hover {
+  background: #ea6c3c;
+  color: #ffffff;
+}
+
+.Button_secondary__kYMEY:active {
+  background: #d94a25;
+  color: #ffffff;
+}
+
+.Button_small__uAK9I {
+  padding: 0.5rem 1.25rem;
+  font-size: 1rem;
+}
+
+/*!*****************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./components/Login/Login.module.css ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************/
+.Login_loginContainer__KZiLS {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.Login_loginForm__nb_3A {
+  margin: 0 auto;
+  padding: 1.25rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.Login_loginForm__nb_3A button,
+.Login_loginForm__nb_3A a {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.Login_loginForm__nb_3A label {
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+.Login_loginForm__nb_3A input:not([type="checkbox"]) {
+  padding: 0.5rem;
+  margin: 0.25rem 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 100%;
+}
+
+.Login_forgotPasswordRow__mKEHJ,
+.Login_rememberMe__6mBuj {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.Login_rememberMe__6mBuj {
+  gap: 0.25ch;
+  margin-right: 2rem;
+  white-space: nowrap;
+}
+
+.Login_rememberMe__6mBuj label {
+  margin-top: 0;
+}
+
+.Login_successMessage__9Ergq {
+  color: green;
+  font-weight: bold;
+}
+

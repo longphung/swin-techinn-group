@@ -1,9 +1,9 @@
 // src/Login.js
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 function Login() {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleLogin = () => {
     // Perform your login logic here

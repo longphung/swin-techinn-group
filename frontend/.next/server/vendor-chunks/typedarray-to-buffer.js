@@ -1,0 +1,35 @@
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+exports.id = "vendor-chunks/typedarray-to-buffer";
+exports.ids = ["vendor-chunks/typedarray-to-buffer"];
+exports.modules = {
+
+/***/ "(rsc)/./node_modules/typedarray-to-buffer/index.js":
+/*!****************************************************!*\
+  !*** ./node_modules/typedarray-to-buffer/index.js ***!
+  \****************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("/**\n * Convert a typed array to a Buffer without a copy\n *\n * Author:   Feross Aboukhadijeh <https://feross.org>\n * License:  MIT\n *\n * `npm install typedarray-to-buffer`\n */ \nvar isTypedArray = (__webpack_require__(/*! is-typedarray */ \"(rsc)/./node_modules/is-typedarray/index.js\").strict);\nmodule.exports = function typedarrayToBuffer(arr) {\n    if (isTypedArray(arr)) {\n        // To avoid a copy, use the typed array's underlying ArrayBuffer to back new Buffer\n        var buf = Buffer.from(arr.buffer);\n        if (arr.byteLength !== arr.buffer.byteLength) {\n            // Respect the \"view\", i.e. byteOffset and byteLength, without doing a copy\n            buf = buf.slice(arr.byteOffset, arr.byteOffset + arr.byteLength);\n        }\n        return buf;\n    } else {\n        // Pass through all other types to `Buffer.from`\n        return Buffer.from(arr);\n    }\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHJzYykvLi9ub2RlX21vZHVsZXMvdHlwZWRhcnJheS10by1idWZmZXIvaW5kZXguanMiLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Q0FPQztBQUVELElBQUlBLGVBQWVDLGdHQUErQjtBQUVsREUsT0FBT0MsT0FBTyxHQUFHLFNBQVNDLG1CQUFvQkMsR0FBRztJQUMvQyxJQUFJTixhQUFhTSxNQUFNO1FBQ3JCLG1GQUFtRjtRQUNuRixJQUFJQyxNQUFNQyxPQUFPQyxJQUFJLENBQUNILElBQUlJLE1BQU07UUFDaEMsSUFBSUosSUFBSUssVUFBVSxLQUFLTCxJQUFJSSxNQUFNLENBQUNDLFVBQVUsRUFBRTtZQUM1QywyRUFBMkU7WUFDM0VKLE1BQU1BLElBQUlLLEtBQUssQ0FBQ04sSUFBSU8sVUFBVSxFQUFFUCxJQUFJTyxVQUFVLEdBQUdQLElBQUlLLFVBQVU7UUFDakU7UUFDQSxPQUFPSjtJQUNULE9BQU87UUFDTCxnREFBZ0Q7UUFDaEQsT0FBT0MsT0FBT0MsSUFBSSxDQUFDSDtJQUNyQjtBQUNGIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vZnJvbnRlbmQvLi9ub2RlX21vZHVsZXMvdHlwZWRhcnJheS10by1idWZmZXIvaW5kZXguanM/NjIwZiJdLCJzb3VyY2VzQ29udGVudCI6WyIvKipcbiAqIENvbnZlcnQgYSB0eXBlZCBhcnJheSB0byBhIEJ1ZmZlciB3aXRob3V0IGEgY29weVxuICpcbiAqIEF1dGhvcjogICBGZXJvc3MgQWJvdWtoYWRpamVoIDxodHRwczovL2Zlcm9zcy5vcmc+XG4gKiBMaWNlbnNlOiAgTUlUXG4gKlxuICogYG5wbSBpbnN0YWxsIHR5cGVkYXJyYXktdG8tYnVmZmVyYFxuICovXG5cbnZhciBpc1R5cGVkQXJyYXkgPSByZXF1aXJlKCdpcy10eXBlZGFycmF5Jykuc3RyaWN0XG5cbm1vZHVsZS5leHBvcnRzID0gZnVuY3Rpb24gdHlwZWRhcnJheVRvQnVmZmVyIChhcnIpIHtcbiAgaWYgKGlzVHlwZWRBcnJheShhcnIpKSB7XG4gICAgLy8gVG8gYXZvaWQgYSBjb3B5LCB1c2UgdGhlIHR5cGVkIGFycmF5J3MgdW5kZXJseWluZyBBcnJheUJ1ZmZlciB0byBiYWNrIG5ldyBCdWZmZXJcbiAgICB2YXIgYnVmID0gQnVmZmVyLmZyb20oYXJyLmJ1ZmZlcilcbiAgICBpZiAoYXJyLmJ5dGVMZW5ndGggIT09IGFyci5idWZmZXIuYnl0ZUxlbmd0aCkge1xuICAgICAgLy8gUmVzcGVjdCB0aGUgXCJ2aWV3XCIsIGkuZS4gYnl0ZU9mZnNldCBhbmQgYnl0ZUxlbmd0aCwgd2l0aG91dCBkb2luZyBhIGNvcHlcbiAgICAgIGJ1ZiA9IGJ1Zi5zbGljZShhcnIuYnl0ZU9mZnNldCwgYXJyLmJ5dGVPZmZzZXQgKyBhcnIuYnl0ZUxlbmd0aClcbiAgICB9XG4gICAgcmV0dXJuIGJ1ZlxuICB9IGVsc2Uge1xuICAgIC8vIFBhc3MgdGhyb3VnaCBhbGwgb3RoZXIgdHlwZXMgdG8gYEJ1ZmZlci5mcm9tYFxuICAgIHJldHVybiBCdWZmZXIuZnJvbShhcnIpXG4gIH1cbn1cbiJdLCJuYW1lcyI6WyJpc1R5cGVkQXJyYXkiLCJyZXF1aXJlIiwic3RyaWN0IiwibW9kdWxlIiwiZXhwb3J0cyIsInR5cGVkYXJyYXlUb0J1ZmZlciIsImFyciIsImJ1ZiIsIkJ1ZmZlciIsImZyb20iLCJidWZmZXIiLCJieXRlTGVuZ3RoIiwic2xpY2UiLCJieXRlT2Zmc2V0Il0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///(rsc)/./node_modules/typedarray-to-buffer/index.js\n");
+
+/***/ }),
+
+/***/ "(ssr)/./node_modules/typedarray-to-buffer/index.js":
+/*!****************************************************!*\
+  !*** ./node_modules/typedarray-to-buffer/index.js ***!
+  \****************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("/**\n * Convert a typed array to a Buffer without a copy\n *\n * Author:   Feross Aboukhadijeh <https://feross.org>\n * License:  MIT\n *\n * `npm install typedarray-to-buffer`\n */\n\nvar isTypedArray = (__webpack_require__(/*! is-typedarray */ \"(ssr)/./node_modules/is-typedarray/index.js\").strict)\n\nmodule.exports = function typedarrayToBuffer (arr) {\n  if (isTypedArray(arr)) {\n    // To avoid a copy, use the typed array's underlying ArrayBuffer to back new Buffer\n    var buf = Buffer.from(arr.buffer)\n    if (arr.byteLength !== arr.buffer.byteLength) {\n      // Respect the \"view\", i.e. byteOffset and byteLength, without doing a copy\n      buf = buf.slice(arr.byteOffset, arr.byteOffset + arr.byteLength)\n    }\n    return buf\n  } else {\n    // Pass through all other types to `Buffer.from`\n    return Buffer.from(arr)\n  }\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHNzcikvLi9ub2RlX21vZHVsZXMvdHlwZWRhcnJheS10by1idWZmZXIvaW5kZXguanMiLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQSxtQkFBbUIsZ0dBQStCOztBQUVsRDtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxJQUFJO0FBQ0o7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9mcm9udGVuZC8uL25vZGVfbW9kdWxlcy90eXBlZGFycmF5LXRvLWJ1ZmZlci9pbmRleC5qcz9hMTNmIl0sInNvdXJjZXNDb250ZW50IjpbIi8qKlxuICogQ29udmVydCBhIHR5cGVkIGFycmF5IHRvIGEgQnVmZmVyIHdpdGhvdXQgYSBjb3B5XG4gKlxuICogQXV0aG9yOiAgIEZlcm9zcyBBYm91a2hhZGlqZWggPGh0dHBzOi8vZmVyb3NzLm9yZz5cbiAqIExpY2Vuc2U6ICBNSVRcbiAqXG4gKiBgbnBtIGluc3RhbGwgdHlwZWRhcnJheS10by1idWZmZXJgXG4gKi9cblxudmFyIGlzVHlwZWRBcnJheSA9IHJlcXVpcmUoJ2lzLXR5cGVkYXJyYXknKS5zdHJpY3RcblxubW9kdWxlLmV4cG9ydHMgPSBmdW5jdGlvbiB0eXBlZGFycmF5VG9CdWZmZXIgKGFycikge1xuICBpZiAoaXNUeXBlZEFycmF5KGFycikpIHtcbiAgICAvLyBUbyBhdm9pZCBhIGNvcHksIHVzZSB0aGUgdHlwZWQgYXJyYXkncyB1bmRlcmx5aW5nIEFycmF5QnVmZmVyIHRvIGJhY2sgbmV3IEJ1ZmZlclxuICAgIHZhciBidWYgPSBCdWZmZXIuZnJvbShhcnIuYnVmZmVyKVxuICAgIGlmIChhcnIuYnl0ZUxlbmd0aCAhPT0gYXJyLmJ1ZmZlci5ieXRlTGVuZ3RoKSB7XG4gICAgICAvLyBSZXNwZWN0IHRoZSBcInZpZXdcIiwgaS5lLiBieXRlT2Zmc2V0IGFuZCBieXRlTGVuZ3RoLCB3aXRob3V0IGRvaW5nIGEgY29weVxuICAgICAgYnVmID0gYnVmLnNsaWNlKGFyci5ieXRlT2Zmc2V0LCBhcnIuYnl0ZU9mZnNldCArIGFyci5ieXRlTGVuZ3RoKVxuICAgIH1cbiAgICByZXR1cm4gYnVmXG4gIH0gZWxzZSB7XG4gICAgLy8gUGFzcyB0aHJvdWdoIGFsbCBvdGhlciB0eXBlcyB0byBgQnVmZmVyLmZyb21gXG4gICAgcmV0dXJuIEJ1ZmZlci5mcm9tKGFycilcbiAgfVxufVxuIl0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(ssr)/./node_modules/typedarray-to-buffer/index.js\n");
+
+/***/ })
+
+};
+;

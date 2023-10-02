@@ -6,68 +6,73 @@ black
 
 /* use padding instead of margin when its border elements */
 
-
 /* Reset some default browser styles */
-body, h1, h2, h3, h4, p, ul, li {
-    margin: 0;
-    padding: 0;
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
 }
 
 /* Apply a background color and font styles */
 body {
-    background-color: #f0f0f0;
-    color: #000;
+  background-color: #f0f0f0;
+  color: #000;
 }
-
 
 /* Style headings with different font sizes */
 h1 {
-    font-family: 'Exo', sans-serif;
-    font-size: 36px;
+  font-family: "Exo", sans-serif;
+  font-size: 36px;
 }
 
 h2 {
-    font-family: 'Exo', sans-serif;
-    font-size: 24px;
+  font-family: "Exo", sans-serif;
+  font-size: 24px;
 }
 
 h3 {
-    font-family: 'Exo', sans-serif;
-    font-size: 18px;
+  font-family: "Exo", sans-serif;
+  font-size: 18px;
 }
 
 h4 {
-    font-family: 'Exo', sans-serif;
-    font-size: 16px;
+  font-family: "Exo", sans-serif;
+  font-size: 16px;
 }
 
 /* Style the paragraphs with a different font family */
 p {
-    font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
 }
 
 /* Style the links */
 a {
-    color: #000;
-    text-decoration: none;
+  color: #000;
+  text-decoration: none;
 }
 
 /* Change link color on hover */
 a:hover {
-    color: #EA6C3C;
+  color: #ea6c3c;
 }
 
 /* Change link color after clicking */
 a:visited {
-    color: black;
+  color: black;
 }
 
 /* Style the <hr> element */
 hr {
-    /* Adjust the color of the line */
-    color: #000000;
-    /* Set the width and style of the line */
-    border: none;
+  /* Adjust the color of the line */
+  color: #000000;
+  /* Set the width and style of the line */
+  border: none;
 }
 
 /* mobile */
@@ -76,4 +81,3 @@ hr {
 /* tablets */
 @media screen and (max-width: 768px) {
 }
-
