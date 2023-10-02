@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lan="en">
+
+<head>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ 
+    
+    <meta http-equiv="X-UA-Compatible" contents="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Submit Results</title>
+</head>
+
+<body>
+    <header>
+        <div id="logo">Burnett Institute</div>
+        <div class="navLinkWrapper">
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">How to Use</a></li>
+                <li><a href="#">Tests</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </div>
+        </header>
+     
+    <h1>Submit Test Results</h1>
+    <div class="tabs" class="spacer-div">
+        
+        <a href="#" class="button"> Submit with Annonimity </a>
+        <a href="login.html" class="button"> Login and submit Results</a>
+    </div>
+    <aside id="">
+        <div class="container mt-5">
+        
+            <form>
+                <!-- Test Date -->
+                <div class="form-group">
+                    <label for="test-date">Test Date:</label>
+                    <input type="date" class="form-control" id="test-date" name="test-date" required>
+                </div>
+                
+                <!-- Results -->
+                <div class="form-group">
+                    <label for="results">Results:</label>
+                    <select class="form-control" id="results" name="results" required>
+                        <option value="">Select Result</option>
+                        <option value="positive">Positive</option>
+                        <option value="negative">Negative</option>
+                        <option value="error">Error</option>
+                    </select>
+                </div>
+    
+                <!-- Test Picture -->
+                <div class="form-group">
+                    <label for="test-picture">Test Picture:</label>
+                    <input type="file" class="form-control-file" id="test-picture" name="test-picture">
+                </div>
+    
+                <!-- Country -->
+                <div class="form-group">
+                    <label for="country">Country*:</label>
+                    <input type="text" class="form-control" id="country" name="country" required>
+                </div>
+    
+                <!-- Zip Code -->
+                <div class="form-group">
+                    <label for="zip-code">Zip Code*:</label>
+                    <input type="text" class="form-control" id="zip-code" name="zip-code" required>
+                </div>
+    
+                <button type="submit" class="btn btn-success">Submit</button>
+                <button type="button" class="btn btn-secondary">Cancel</button>
+            </form>
+        </div>
+        
+    </aside>
+  
+    <footer>
+        <div class="footer-column">
+            <h2>Navigation</h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">How to Use</a></li>
+                <li><a href="#">Tests</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h2>HIV Support Services</h2>
+            <ul>
+                <li><a href="#">Service 1</a></li>
+                <li><a href="#">Service 2</a></li>
+                <li><a href="#">Service 3</a></li>
+                <!-- Add more services as needed -->
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h2>Contacts</h2>
+            <ul>
+                <li>Email: example@example.com</li>
+                <li>Phone: +123456789</li>
+                <!-- Add more contact information as needed -->
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h2>Support</h2>
+            <ul>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Contact Support</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="scriptfaq.js"></script>
+</body>
+
+</html>
