@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Analytics Page</title>
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link href="assets/css/fontawesome.css" rel="stylesheet">
+    <link href="assets/css/brands.css" rel="stylesheet">
+    <link href="assets/css/solid.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter';font-size: 16px;
+            margin: 0;
+            padding: 0;
+        }
+
+        #top-navbar {
+            width: calc(100% - 290px);
+            /* adjusted for left-nav width */
+            height: 50px;
+            background-color: #2C3E50;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+            float: right;
+            /* ensures the navbar starts from the end of left-nav */
+        }
+
+        #top-navbar .left-content {
+            display: flex;
+            align-items: center;
+        }
+
+        #top-navbar .right-content {
+            display: flex;
+            align-items: center;
+        }
+
+        #top-navbar .search-bar {
+            margin-right: 10px;
+            padding: 5px;
+            border: none;
+            border-radius: 4px;
+        }
+
+        #left-nav {
+            width: 250px;
+            height: 100vh;
+            background-color: #EA6C3C;
+            float: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 0;
+            position: relative;
+            /* so it overlays top-navbar */
+            z-index: 10;
+            /* ensures it stays on top */
+        }
+
+        #left-nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        #left-nav ul li {
+            margin: 20px;
+            cursor: pointer;
+            font-family: 'Inter';
+            color: white;
+        }
+
+        #main-content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+
+        .chart {
+            width: 400px;
+            height: 260px;
+            background-color: #e5e5e5;
+            margin: 50px 50px;
+            display: inline-block;
+        }
+        a {
+            color: white;
+            font-size: larger;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="top-navbar">
+        <div class="left-content">
+            User Access
+        </div>
+        <div class="right-content">
+            <input type="search" placeholder="Search..." class="search-bar">&nbsp; &nbsp;
+                <a href="#"><i class="fa-regular fa-bell"></i></a>&nbsp; &nbsp;
+                <a href="#"><i class="fa-regular fa-arrow-right-from-bracket"></i></a>
+        </div>
+    </div>
+
+    <div id="left-nav">
+        <ul>
+            <li class="logo">ANALYTICS</li>
+        </ul>
+        <ul>
+            <li> <i class="fa-solid fa-user-large"></i>&nbsp;User Access</li>
+            <li><i class="fa-regular fa-file"></i>&nbsp;Workflow</li>
+            <li><i class="fa-solid fa-chart-simple"></i>&nbsp;General analytics</li>
+            <li><i class="fa-regular fa-bell"></i>&nbsp; Notifications</li>
+        </ul>
+        <ul>
+            <hr>
+            <li><i class="fa-regular fa-paste"></i>&nbsp;Dashboard</li>
+            <li><i class="fa-regular fa-list-check"></i>&nbsp;User management</li>
+            <li><i class="fa-regular fa-paste"></i>&nbsp;Content management</li>
+            <li><i class="fa-regular fa-chart-line"></i>&nbsp;Reporting</li>
+        </ul>
+        <ul>
+            <li><i class="fa-regular fa-gear"></i>&nbsp;Settings</li>
+            <li><i class="fa-regular fa-arrow-right-from-bracket"></i>&nbsp;Logout</li>
+        </ul>
+    </div>
+
+    <div id="main-content">
+        <div class="chart">
+            <h3>Most Visited Pages</h3>
+            <!-- Table chart goes here -->
+        </div>
+
+        <div class="chart">
+            <h3>Time of Day Accessed</h3>
+            <!-- Pie chart goes here -->
+        </div>
+        <div class="chart">
+            <h3>Most Visited Pages</h3>
+            <!-- Table chart goes here -->
+        </div>
+
+        <div class="chart">
+            <h3>Time of Day Accessed</h3>
+            <!-- Pie chart goes here -->
+        </div>
+    </div>
+    
+    
+
+</body>
+
+</html>
