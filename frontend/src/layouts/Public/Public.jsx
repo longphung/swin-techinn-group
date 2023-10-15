@@ -3,12 +3,16 @@ import classes from "./public.module.css";
 import Link from "next/link";
 
 const Public = async (props) => {
-  const footerRes = await fetch("http://127.0.0.1:1337/api/footer?populate=*");
+  const footerRes = await fetch(
+    `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/footer?populate=*`,
+  );
+  const { data, error } = await footerRes.json();
+  if (error) {
+    return <div>Failed to load footer</div>;
+  }
   const {
-    data: {
-      attributes: { FooterColumn },
-    },
-  } = await footerRes.json();
+    attributes: { FooterColumn },
+  } = data;
   return (
     <>
       <header className={classes.header}>

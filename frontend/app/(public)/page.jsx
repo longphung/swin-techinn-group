@@ -8,13 +8,16 @@ import Button from "components/Button/Button";
 
 async function HomePage() {
   const homePage = await fetch(
-    "http://127.0.0.1:1337/api/home-page?populate[0]=FirstSection&populate[1]=SecondSection.SecondSectionItem,SecondSection.SecondSectionItem.SecondSectionPicture&populate[2]=ThirdSection.ThirdSectionTab.ThirSectionTabRow&populate=FourthSection.Chart,FourthSection.CasesEachYear,FourthSection.background,FirstSection.FirstSectionImage",
+    process.env.NEXT_PUBLIC_STRAPI_URL + "/api/home-page?populate[0]=FirstSection&populate[1]=SecondSection.SecondSectionItem,SecondSection.SecondSectionItem.SecondSectionPicture&populate[2]=ThirdSection.ThirdSectionTab.ThirSectionTabRow&populate=FourthSection.Chart,FourthSection.CasesEachYear,FourthSection.background,FirstSection.FirstSectionImage",
   );
+
+  const { data, error } = await homePage.json();
+  if (error) {
+    return <div>Failed to load home page</div>;
+  }
   const {
-    data: {
-      attributes: { FirstSection, SecondSection, ThirdSection, FourthSection },
-    },
-  } = await homePage.json();
+    attributes: { FirstSection, SecondSection, ThirdSection, FourthSection },
+  } = data;
   return (
     <>
       <section className={classes.firstSection}>
@@ -24,7 +27,7 @@ async function HomePage() {
           <Button>{FirstSection.FirstSectionButton}</Button>
         </article>
         <Image
-          src={`http://127.0.0.1:1337${FirstSection.FirstSectionImage.data.attributes.url}`}
+          src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${FirstSection.FirstSectionImage.data.attributes.url}`}
           alt="First Section Image"
           width={FirstSection.FirstSectionImage.data.attributes.width}
           height={FirstSection.FirstSectionImage.data.attributes.height}
@@ -36,7 +39,7 @@ async function HomePage() {
         {SecondSection.SecondSectionItem.map((item) => (
           <article key={item.id}>
             <Image
-              src={`http://127.0.0.1:1337${item.SecondSectionPicture.data.attributes.url}`}
+              src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${item.SecondSectionPicture.data.attributes.url}`}
               alt="Second Section Image"
               width={item.SecondSectionPicture.data.attributes.width}
               height={item.SecondSectionPicture.data.attributes.height}
@@ -72,13 +75,13 @@ async function HomePage() {
       <section className={classes.fourthSection}>
         <div className={classes.fourthSectionChart}>
           <Image
-            src={`http://127.0.0.1:1337${FourthSection.CasesEachYear.data.attributes.url}`}
+            src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${FourthSection.CasesEachYear.data.attributes.url}`}
             alt="Cases Each Year"
             width={FourthSection.CasesEachYear.data.attributes.width}
             height={FourthSection.CasesEachYear.data.attributes.height}
           />
           <Image
-            src={`http://127.0.0.1:1337${FourthSection.Chart.data.attributes.url}`}
+            src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${FourthSection.Chart.data.attributes.url}`}
             alt="Chart"
             width={FourthSection.Chart.data.attributes.width}
             height={FourthSection.Chart.data.attributes.height}

@@ -1,7 +1,7 @@
 import React from "react";
 
 const FaqPage = async () => {
-  const faqRes = await fetch("http://127.0.0.1:1337/api/faq-page?populate=*");
+  const faqRes = await fetch(process.env.NEXT_PUBLIC_STRAPI_URL + "/api/faq-page?populate=*");
   const {
     data: {
       attributes: { qaPair },

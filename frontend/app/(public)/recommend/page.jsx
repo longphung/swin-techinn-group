@@ -3,7 +3,7 @@ import { marked } from "marked";
 
 const RecommendPage = async () => {
   const recommendPageRes = await fetch(
-    "http://127.0.0.1:1337/api/recommend-page",
+    process.env.NEXT_PUBLIC_STRAPI_URL + "/api/recommend-page",
   );
   const {
     data: {
