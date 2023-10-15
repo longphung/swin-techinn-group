@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_home_page_third_sections",
+  "info": {
+    "displayName": "ThirdSection"
+  },
+  "options": {},
+  "attributes": {
+    "ThirdSectionTab": {
+      "displayName": "ThirdSectionTab",
+      "type": "component",
+      "repeatable": true,
+      "component": "home-page.third-section-tab"
+    }
+  }
+}

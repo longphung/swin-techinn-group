@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@600&family=Merriweather:wght@300;400;700&family=Montserrat:wght@500;600;700&family=Oswald:wght@600&display=swap");
+
+* {
+  font-family: "Exo", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Add CSS styles for layout */
+/* Style headings with different font sizes */
+/*h1 {*/
+/*  font-size: 36px;*/
+/*}*/
+
+/*h2 {*/
+/*  font-size: 24px;*/
+/*}*/
+
+/*h3 {*/
+/*  font-size: 18px;*/
+/*}*/
+
+/*h4 {*/
+/*  font-size: 16px;*/
+/*}*/
+
+/* Style the paragraphs with a different font family */
+p,
+a {
+}
+
+/*article {*/
+/*  padding: 20px 50px;*/
+/*}*/
+/*#blackbg {*/
+/*  background-color: #000000;*/
+/*  color: #fff;*/
+/*  text-align: center;*/
+/*  justify-content: center;*/
+/*}*/
+/*#blackbg aside h3 {*/
+/*  text-transform: uppercase;*/
+/*  letter-spacing: 1px;*/
+/*}*/
+
+/*#split {*/
+/*  margin: 0;*/
+/*  padding: 0px;*/
+/*}*/
+
+/*#orangebg {*/
+/*  background-color: #ea6c3c;*/
+/*  text-align: left;*/
+/*  justify-content: left;*/
+/*  color: #fff;*/
+/*  padding: 20px 0px 20px 100px;*/
+/*}*/
+/*#regbg {*/
+/*  color: black;*/
+/*  padding: 20px 100px 20px 50px;*/
+/*}*/
+
+/*#bgimg {*/
+/*  background-image: url("2.jpg");*/
+/*  background-repeat: no-repeat;*/
+/*  background-size: cover;*/
+/*  color: white;*/
+/*}*/
+
+/*!* Styling for the footer *!*/
+/*footer {*/
+/*  background-color: black;*/
+/*  color: white;*/
+/*  display: flex;*/
+/*  justify-content: space-between;*/
+/*  padding: 1rem 10rem;*/
+/*  width: -webkit-fill-available;*/
+/*  bottom: 0;*/
+
+/*  left: 0;*/
+/*  right: 0;*/
+/*}*/
+
+/*.footer-column {*/
+/*  flex: 1;*/
+/*  margin-right: 20px;*/
+/*  width: 150px;*/
+/*}*/
+
+/*#black {*/
+/*  color: black;*/
+/*}*/
+
+/*#black p ul li a {*/
+/*  color: black;*/
+/*}*/
+
+/*.circleList {*/
+/*  list-style-type: none;*/
+/*  padding-left: 0;*/
+/*}*/
+
+/*.circleList li {*/
+/*  position: relative;*/
+/*  padding-left: 20px; !* Adjust as needed for spacing between the circle and text *!*/
+/*  margin-bottom: 10px; !* Adjust as needed for spacing between list items *!*/
+/*}*/
+
+/*.circleList li a {*/
+/*  text-decoration: none;*/
+/*  color: #ffffff;*/
+/*}*/
+
+/*.circleList li::before {*/
+/*  content: "";*/
+/*  position: absolute;*/
+/*  left: 0;*/
+/*  top: 50%;*/
+/*  transform: translateY(-50%);*/
+/*  width: 10px; !* Adjust the size of the circle *!*/
+/*  height: 10px; !* Adjust the size of the circle *!*/
+/*  border: 2px solid #ffffff; !* Border style, color, and width *!*/
+/*  border-radius: 50%; !* Makes it a circle *!*/
+/*  box-sizing: border-box;*/
+/*  background-color: transparent; !* Transparent center *!*/
+/*}*/
+
+/*.circleListBlack {*/
+/*  list-style-type: none;*/
+/*  padding-left: 0;*/
+/*}*/
+
+/*.circleListBlack li {*/
+/*  position: relative;*/
+/*  padding-left: 20px; !* Adjust as needed for spacing between the circle and text *!*/
+/*  margin-bottom: 10px; !* Adjust as needed for spacing between list items *!*/
+/*}*/
+
+/*.circleListBlack li a {*/
+/*  text-decoration: none;*/
+/*  color: #000000;*/
+/*}*/
+
+/*.circleListBlack li::before {*/
+/*  content: "";*/
+/*  position: absolute;*/
+/*  left: 0;*/
+/*  top: 50%;*/
+/*  transform: translateY(-50%);*/
+/*  width: 10px; !* Adjust the size of the circle *!*/
+/*  height: 10px; !* Adjust the size of the circle *!*/
+/*  border: 2px solid #000000; !* Border style, color, and width *!*/
+/*  border-radius: 50%; !* Makes it a circle *!*/
+/*  box-sizing: border-box;*/
+/*  background-color: transparent; !* Transparent center *!*/
+/*}*/
+
+/*footer ul {*/
+/*  list-style: none;*/
+/*  padding: 0;*/
+/*}*/
+
+/*footer li {*/
+/*  margin-bottom: 10px;*/
+/*}*/
+/*footer li a {*/
+/*  text-decoration: none;*/
+/*  color: white;*/
+/*}*/
+/*footer li a:hover {*/
+/*  color: #ea6c3c;*/
+/*}*/
+
+/*@media screen and (max-width: 768px) {*/
+/*}*/
+
+/*h1 {*/
+/*  margin: 1rem;*/
+/*}*/
+
+/*article {*/
+/*  !* Display <aside> elements side by side *!*/
+/*  display: flex;*/
+/*  width: -webkit-fill-available;*/
+/*}*/
+
+/*aside {*/
+/*  flex: 1;*/
+/*  padding: 20px 50px;*/
+/*}*/
+/*#homepicture {*/
+/*  !* Add your image styling here *!*/
+/*  background-image: url("1.jpg");*/
+/*  background-repeat: no-repeat;*/
+/*  background-size: contain;*/
+/*  background-position: center;*/
+/*  margin: 0 50px;*/
+/*}*/
+/*#picture {*/
+/*  !* Add your image styling here *!*/
+/*  background-image: url("images.png");*/
+/*  background-repeat: no-repeat;*/
+/*  background-size: contain;*/
+/*  background-position: center;*/
+/*  margin: 0 20px;*/
+/*}*/
+
+/*a.button {*/
+/*  display: inline-block;*/
+/*  padding: 10px 20px;*/
+/*  background-color: #ea6c3c; !* Button background color *!*/
+/*  color: #fff; !* Button text color *!*/
+/*  text-decoration: none;*/
+/*  border-radius: 20px; !* Adjust the value to control the roundness *!*/
+/*  transition: background-color 0.3s ease; !* Add a smooth transition effect *!*/
+/*  letter-spacing: 1px;*/
+/*  transition:*/
+/*    background-color 0.3s ease,*/
+/*    box-shadow 0.3s ease; !* Add smooth transitions *!*/
+/*  box-shadow: 2px 2px 5px rgba(255, 87, 34, 0.2); !* Subtle shadow with #FF5722 shade *!*/
+/*}*/
+
+/*a.button:hover {*/
+/*  background-color: #ff5722; !* Change the background color on hover *!*/
+/*}*/
+
+/*a.white {*/
+/*  display: inline-block;*/
+/*  padding: 10px 20px;*/
+/*  background-color: #ffffff; !* Button background color *!*/
+/*  color: #ff5722; !* Button text color *!*/
+/*  text-decoration: none;*/
+/*  border-radius: 20px; !* Adjust the value to control the roundness *!*/
+/*  transition: background-color 0.3s ease; !* Add a smooth transition effect *!*/
+
+/*  letter-spacing: 1px;*/
+/*  transition:*/
+/*    background-color 0.3s ease,*/
+/*    box-shadow 0.3s ease; !* Add smooth transitions *!*/
+/*  box-shadow: 2px 2px 5px rgba(252, 247, 246, 0.2); !* Subtle shadow with #FF5722 shade *!*/
+/*}*/
+
+/*a.white:hover {*/
+/*  background-color: #ffffff; !* Change the background color on hover *!*/
+/*}*/
+
+/*#faqContainer {*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*}*/
+
+/*.itemQuestion {*/
+/*  font-size: 1.2rem;*/
+/*  padding: 1rem;*/
+/*  display: flex;*/
+/*  justify-content: space-between;*/
+/*  font-weight: bold;*/
+/*}*/
+/*.itemAnswer {*/
+/*  display: none;*/
+/*}*/
+/*.close {*/
+/*  display: none;*/
+/*}*/
+/*.showAnswer .itemAnswer {*/
+/*  display: block;*/
+/*}*/
+/*.showAnswer .close {*/
+/*  display: block;*/
+/*}*/
+/*.showAnswer .expand {*/
+/*  display: none;*/
+/*}*/

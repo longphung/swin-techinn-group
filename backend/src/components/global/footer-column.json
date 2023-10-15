@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_global_footer_columns",
+  "info": {
+    "displayName": "footer column",
+    "icon": "book",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "FooterColumnTitle": {
+      "type": "string"
+    },
+    "FooterColumnValues": {
+      "type": "json"
+    }
+  }
+}
