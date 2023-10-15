@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_home_page_second_sections",
+  "info": {
+    "displayName": "Second Section"
+  },
+  "options": {},
+  "attributes": {
+    "SecondSectionItem": {
+      "displayName": "Second Section Item",
+      "type": "component",
+      "repeatable": true,
+      "component": "home-page.second-section-item"
+    }
+  }
+}

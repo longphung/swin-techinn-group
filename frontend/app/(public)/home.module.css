@@ -1,0 +1,112 @@
+.firstSection {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  margin: 2rem 0;
+}
+
+.firstSection h1 {
+  font-size: 2.25rem;
+  font-weight: bold;
+  margin-bottom: 3.5rem;
+  margin-top: 0;
+}
+
+.firstSection p {
+  font-size: 1.25rem;
+  margin-bottom: 4.25rem;
+  white-space: pre-line;
+}
+
+.secondSection {
+  margin: 0 -10rem;
+  background: black;
+  color: white;
+  display: flex;
+  padding: 4.5rem 10rem;
+  justify-content: space-between;
+  text-align: center;
+  gap: 9.25rem;
+}
+
+.secondSection h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 2rem;
+  margin: 2rem;
+}
+
+.secondSection p {
+  margin: 0;
+  max-width: 20.8rem;
+}
+
+.thirdSection {
+  display: flex;
+  margin: 0 -10rem;
+}
+
+.thirdSection article {
+  width: 50%;
+  padding: 3.125rem 3.125rem 3.125rem 10rem;
+  display: grid;
+  grid-template-rows: fit-content(100%) auto auto;
+}
+
+.thirdSection h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 0 2.5rem 0;
+}
+
+.thirdSection ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 0;
+  display: flex;
+  flex-flow: column;
+  gap: 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.thirdSection li,
+.thirdSection li span {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.thirdSection li span {
+  gap: 0.5ch;
+}
+
+.thirdSection article:first-child {
+  background-color: hsla(17, 81%, 58%, 1);
+  color: white;
+}
+
+.thirdSectionButtonContainer {
+  align-self: end;
+}
+
+.fourthSection {
+  display: flex;
+  background-image: url("http://127.0.0.1:1337/uploads/online_marketing_db2f41de84.png");
+  background-size: cover;
+  margin: 0 -10rem;
+  padding: 3.75rem 10rem;
+  gap: 8rem;
+}
+
+.fourthSectionChart {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.fourthSection article {
+  font-size: 1.5rem;
+  white-space: pre-line;
+  color: white;
+}

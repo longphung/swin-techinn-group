@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_global_headers",
+  "info": {
+    "displayName": "header",
+    "icon": "user"
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "type": "richtext"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_global_footers",
+  "info": {
+    "displayName": "footer",
+    "icon": "file",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Navigation": {
+      "displayName": "footer column",
+      "type": "component",
+      "repeatable": true,
+      "component": "global.footer-column"
+    },
+    "Links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "global.footer-column"
+    }
+  }
+}

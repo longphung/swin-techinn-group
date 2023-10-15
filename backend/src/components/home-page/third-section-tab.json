@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_home_page_third_section_tabs",
+  "info": {
+    "displayName": "ThirdSectionTab"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "ThirSectionTabRow": {
+      "displayName": "ThirdSectionTabRow",
+      "type": "component",
+      "repeatable": true,
+      "component": "home-page.third-section-tab-row"
+    }
+  }
+}

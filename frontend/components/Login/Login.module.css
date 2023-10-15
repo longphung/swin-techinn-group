@@ -1,0 +1,66 @@
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.loginForm {
+  margin: 0 auto;
+  padding: 1.25rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.loginForm button,
+.loginForm a {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.loginForm label {
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+.loginForm input:not([type="checkbox"]) {
+  padding: 0.5rem;
+  margin: 0.25rem 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 100%;
+}
+
+.forgotPasswordRow,
+.rememberMe {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.rememberMe {
+  gap: 0.25ch;
+  margin-right: 2rem;
+  white-space: nowrap;
+}
+
+.rememberMe label {
+  margin-top: 0;
+}
+
+.successMessage {
+  color: green;
+  font-weight: bold;
+}

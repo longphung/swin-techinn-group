@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_home_page_third_section_tab_rows",
+  "info": {
+    "displayName": "ThirdSectionTabRow"
+  },
+  "options": {},
+  "attributes": {
+    "ThirdSectionTabRowContent": {
+      "type": "json"
+    }
+  }
+}

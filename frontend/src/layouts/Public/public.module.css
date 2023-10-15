@@ -1,0 +1,87 @@
+.header {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000; /* Add your desired background color */
+  color: #fff; /* Add your desired text color */
+  padding: 0 10rem;
+}
+
+.logo {
+  /*margin: 1.5rem 0;*/
+  font-size: 1.375rem; /* Adjust the font size as needed */
+  color: #ea6c3c;
+  letter-spacing: 1px;
+}
+
+.navLinks {
+  /*align-self: stretch;*/
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 6.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.navLinks li {
+  height: 100%;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: #fff; /* Add your desired link text color */
+}
+
+.navLinks a:hover {
+  text-decoration: none;
+  color: #ea6c3c; /* Add your desired link text color */
+}
+
+.main {
+  padding: 0 10rem;
+}
+
+.footer {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 10rem;
+}
+
+.footer h2 {
+  margin-bottom: 2rem;
+}
+
+.footerColumn {
+  flex: 1;
+  margin-right: 1.25rem;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer li {
+  margin-bottom: 0.625rem;
+}
+
+.footer li a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer li a:hover {
+  color: #ea6c3c;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+}
