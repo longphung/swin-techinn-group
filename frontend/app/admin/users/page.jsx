@@ -1,6 +1,6 @@
 import React from "react";
 import { format } from "date-fns";
-import { cookies, headers } from "next/headers";
+import { cookies } from "next/headers";
 import { createClient } from "@supabase/supabase-js";
 import { redirect } from "next/navigation";
 import { toast } from "react-toastify";

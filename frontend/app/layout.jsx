@@ -1,5 +1,7 @@
 import "./style.css";
 import ToastContainer from "components/ToastContainer/ToastContainer";
+
+/* eslint-disable */
 export const metadata = {
   title: "Burnet Institute",
   description:

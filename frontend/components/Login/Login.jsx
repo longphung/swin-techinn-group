@@ -11,7 +11,7 @@ const Login = () => {
   const params = useSearchParams();
   const message = params.get("message");
   const supabase = createClientComponentClient();
-  const [isPending, startTransition] = useTransition();
+  const [, startTransition] = useTransition();
   const router = useRouter();
 
   const handleSubmit = async (e) => {

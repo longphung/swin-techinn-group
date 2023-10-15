@@ -11,10 +11,7 @@ async function HomePage() {
     process.env.NEXT_PUBLIC_STRAPI_URL + "/api/home-page?populate[0]=FirstSection&populate[1]=SecondSection.SecondSectionItem,SecondSection.SecondSectionItem.SecondSectionPicture&populate[2]=ThirdSection.ThirdSectionTab.ThirSectionTabRow&populate=FourthSection.Chart,FourthSection.CasesEachYear,FourthSection.background,FirstSection.FirstSectionImage",
   );
 
-  const { data, error } = await homePage.json();
-  if (error) {
-    return <div>Failed to load home page</div>;
-  }
+  const { data, error } = await homePage.json();if (error) return <div>Failed to load home page</div>;
   const {
     attributes: { FirstSection, SecondSection, ThirdSection, FourthSection },
   } = data;
