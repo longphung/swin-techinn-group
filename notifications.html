@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="css/styleexample.css">
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <h3 style="padding:10px">User Management</h3>
+        <br>
+        <a class="active" href="#"><i class='bx bxs-balloon'></i> Report Generation</a>
+        <a href="#"> <i class='bx bxs-balloon'></i>Test Results</a>
+        <a href="#"><i class='bx bxs-balloon'></i>Manage User Accounts</a>
+        <a href="#"><i class='bx bxs-balloon'></i>Notifications</a>
+        <hr>
+        
+        <a href="#"><i class='bx bxs-balloon'></i>Dashboard</a>
+        <a href="#"><i class='bx bxs-balloon'></i>User Management</a>
+        <a href="#"><i class='bx bxs-balloon'></i>Content Management</a>
+        <a href="#"><i class='bx bxs-balloon'></i>Reporting</a>
+        <br><br>
+        <a href="#"><i class='bx bxs-balloon'></i>Settings</a>
+        <a href="#"><i class='bx bxs-balloon'></i>Logout</a>
+    </div>
+
+    <div class="content">
+
+        <div class="top-bar">
+            <h3> Manage user notifications</h3>
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search...">
+               
+                
+            </div>
+            <div class="icons">
+                <a><i class='bx bx-bell'></i></a>
+            <a><i class='bx bx-log-in' ></i></a>
+            </div>
+        </div>
+      
+        <div class="container-xl">
+            <article >
+                <div class="card">
+                    <h2>User Information</h2>
+                    <p><strong>Name:</strong> John Doe</p>
+                    <p><strong>Email:</strong> john.doe@example.com</p>
+                    <p><strong>Username:</strong> johndoe123</p>
+                    <p><strong>Mobile:</strong> +1234567890</p>
+                </div>
+                <h2>Notification Settings</h2>
+                <table class="settings-table">
+                    <tr>
+                        <th>Notification Type</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        <th>No Thanks</th>
+                    </tr>
+                    <tr>
+                        <td>Sugesstion(Time for checkup)</td>
+                        <td><input type="checkbox" name="emailNotification" checked></td>
+                        <td><input type="checkbox" name="emailSound" checked></td>
+                        <td><input type="checkbox" name="emailSound" checked></td>
+                    </tr>
+                    <tr>
+                        <td>Details Update</td>
+                        <td><input type="checkbox" name="smsNotification"></td>
+                        <td><input type="checkbox" name="smsSound" checked></td>
+                        <td><input type="checkbox" name="emailSound" checked></td>
+                    </tr>
+                    <tr>
+                        <td>Newsletter(Time for checkup)</td>
+                        <td><input type="checkbox" name="pushNotification" checked></td>
+                        <td><input type="checkbox" name="pushSound"></td>
+                        <td><input type="checkbox" name="emailSound" checked></td>
+                    </tr>
+                </table>
+            </article>
+
+</body>
+
+</html>
