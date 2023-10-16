@@ -95,3 +95,13 @@
   margin: 0;
   cursor: pointer;
 }
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 6.75rem;
+}
+
+.mainContentWrapper {
+  padding: 0 2rem;
+}

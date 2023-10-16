@@ -4,6 +4,7 @@ import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
 import Link from "next/link";
 import Button from "components/Button/Button";
+import AdminTopBar from "components/AdminTopBar/AdminTopBar";
 
 const AdminLayout = async (props) => {
   const cookieStore = cookies();
@@ -71,7 +72,10 @@ const AdminLayout = async (props) => {
           </button>
         </div>
       </aside>
-      <main>{props.children}</main>
+      <main className={classes.main}>
+        <AdminTopBar />
+        <div className={classes.mainContentWrapper}>{props.children}</div>
+      </main>
     </div>
   );
 };
