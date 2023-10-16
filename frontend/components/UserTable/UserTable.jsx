@@ -5,6 +5,16 @@ import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-material.min.css";
 import { AgGridReact } from "ag-grid-react";
 
+const EditDeleteButton = (props) => {
+  console.log(props);
+  return (
+    <div>
+      <button>Edit</button>
+      <button>Delete</button>
+    </div>
+  );
+};
+
 const columnDefs = [
   {
     field: "name",
@@ -23,6 +33,10 @@ const columnDefs = [
   {
     field: "suburb",
   },
+  {
+    field: "edit",
+    cellRenderer: EditDeleteButton,
+  }
 ];
 
 const UserTable = (props) => {
