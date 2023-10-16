@@ -5,6 +5,7 @@ import { cookies } from "next/headers";
 import Link from "next/link";
 import Button from "components/Button/Button";
 import AdminTopBar from "components/AdminTopBar/AdminTopBar";
+import AdminNav from "components/AdminNav/AdminNav";
 
 const AdminLayout = async (props) => {
   const cookieStore = cookies();
@@ -23,43 +24,38 @@ const AdminLayout = async (props) => {
       </div>
     );
   }
+  const profileRes = await supabase
+    .from("profiles")
+    .select("*")
+    .eq("id", session.user.id);
+
+  if (profileRes.error) {
+    return (
+      <div className={classes.notLoggedIn}>
+        <h1>Error while fetching user profile</h1>
+        <Button as={Link} href="/login">
+          Login
+        </Button>
+      </div>
+    );
+  }
+  const profile = profileRes.data[0];
+  let adminNav = [];
+  if (profile.is_admin) {
+    const res = await supabase.from("admin_page_features").select("*");
+    adminNav = res.data;
+  } else {
+    const res = await supabase
+      .from("admin_page_features")
+      .select("*")
+      .eq("is_admin", false);
+    adminNav = res.data;
+  }
 
   return (
     <div className={classes.adminContainer}>
       <aside className={classes.sidebar}>
-        <h1>User Management</h1>
-
-        <nav>
-          <a className="active" href="#">
-            <i className="bx bxs-balloon"></i> Report Generation
-          </a>
-          <a href="#">
-            {" "}
-            <i className="bx bxs-balloon"></i>Test Results
-          </a>
-          <a href="#">
-            <i className="bx bxs-balloon"></i>Manage User Accounts
-          </a>
-          <a href="#">
-            <i className="bx bxs-balloon"></i>Notifications
-          </a>
-        </nav>
-
-        <nav>
-          <a href="#">
-            <i className="bx bxs-balloon"></i>Dashboard
-          </a>
-          <a href="#">
-            <i className="bx bxs-balloon"></i>User Management
-          </a>
-          <a href="#">
-            <i className="bx bxs-balloon"></i>Content Management
-          </a>
-          <a href="#" className={classes.active}>
-            <i className="bx bxs-balloon"></i>Reporting
-          </a>
-        </nav>
-
+        <AdminNav data={adminNav} />
         <div>
           <form
             id="logout"
