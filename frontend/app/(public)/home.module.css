@@ -29,6 +29,16 @@
   gap: 9.25rem;
 }
 
+.secondSection a {
+  text-decoration: none;
+  color: white;
+  transition: text-decoration 0.2s;
+}
+
+.secondSection a:hover {
+  text-decoration: underline;
+}
+
 .secondSection h2 {
   font-size: 1.5rem;
   font-weight: bold;
@@ -92,7 +102,7 @@
 
 .fourthSection {
   display: flex;
-  background-image: url("https://swinburne.phungnnl.dev/swin-techinn-homepage-background.png");
+  background-image: url("https://swinburne.phungnnl.dev/uploads/homepage2_a72f9469d8.jpg");
   background-size: cover;
   margin: 0 -10rem;
   padding: 3.75rem 10rem;

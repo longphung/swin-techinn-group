@@ -25,7 +25,7 @@
 }
 
 .sidebar {
-  height: 100vh;
+  /*height: 100vh;*/
   background: rgba(234, 108, 60, 1);
   display: flex;
   flex-direction: column;
@@ -94,4 +94,14 @@
   padding: 0;
   margin: 0;
   cursor: pointer;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 6.75rem;
+}
+
+.mainContentWrapper {
+  padding: 0 2rem;
 }
