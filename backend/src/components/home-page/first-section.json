@@ -1,28 +1,35 @@
 {
   "collectionName": "components_home_page_first_sections",
   "info": {
-    "displayName": "FirstSection"
+    "displayName": "FirstSection",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "FirstSectionTitle": {
       "type": "string"
     },
-    "FirstSectionDescription": {
-      "type": "richtext"
-    },
     "FirstSectionButton": {
       "type": "string"
     },
     "FirstSectionImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "FirstSectionDescription": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "standard"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
     }
   }
 }
