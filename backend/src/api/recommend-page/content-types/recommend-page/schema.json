@@ -4,7 +4,8 @@
   "info": {
     "singularName": "recommend-page",
     "pluralName": "recommend-pages",
-    "displayName": "Recommend Page"
+    "displayName": "Recommend Page",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,7 +13,12 @@
   "pluginOptions": {},
   "attributes": {
     "body": {
-      "type": "richtext"
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "standard"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
     }
   }
 }

@@ -17,9 +17,6 @@
         "audios"
       ]
     },
-    "Description": {
-      "type": "richtext"
-    },
     "CasesEachYear": {
       "type": "media",
       "multiple": false,
@@ -32,14 +29,23 @@
       ]
     },
     "background": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "Description": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "standard"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
     }
   }
 }

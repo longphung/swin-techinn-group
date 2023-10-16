@@ -4,10 +4,18 @@ export interface FaqFaq extends Schema.Component {
   collectionName: 'components_faq_faqs';
   info: {
     displayName: 'FAQ';
+    description: '';
   };
   attributes: {
     question: Attribute.String;
-    answer: Attribute.RichText;
+    answer: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'standard';
+        }
+      >;
   };
 }
 
@@ -77,12 +85,20 @@ export interface HomePageFirstSection extends Schema.Component {
   collectionName: 'components_home_page_first_sections';
   info: {
     displayName: 'FirstSection';
+    description: '';
   };
   attributes: {
     FirstSectionTitle: Attribute.String;
-    FirstSectionDescription: Attribute.RichText;
     FirstSectionButton: Attribute.String;
     FirstSectionImage: Attribute.Media;
+    FirstSectionDescription: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'standard';
+        }
+      >;
   };
 }
 
@@ -94,9 +110,16 @@ export interface HomePageFourthSection extends Schema.Component {
   };
   attributes: {
     Chart: Attribute.Media;
-    Description: Attribute.RichText;
     CasesEachYear: Attribute.Media;
     background: Attribute.Media;
+    Description: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'standard';
+        }
+      >;
   };
 }
 

@@ -1,7 +1,8 @@
 {
   "collectionName": "components_faq_faqs",
   "info": {
-    "displayName": "FAQ"
+    "displayName": "FAQ",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -9,7 +10,12 @@
       "type": "string"
     },
     "answer": {
-      "type": "richtext"
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "standard"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
     }
   }
 }
