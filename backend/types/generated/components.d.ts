@@ -133,6 +133,7 @@ export interface HomePageSecondSectionItem extends Schema.Component {
     SecondSectionPicture: Attribute.Media;
     Title: Attribute.String;
     Description: Attribute.Text;
+    LinkTo: Attribute.String;
   };
 }
 
