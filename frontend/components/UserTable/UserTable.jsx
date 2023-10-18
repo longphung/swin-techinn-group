@@ -101,7 +101,6 @@ const UserTable = (props) => {
   }, []);
 
   const handleCellEditingStopped = async (event) => {
-    console.log(event);
     const {
       colDef: { field },
       data,
