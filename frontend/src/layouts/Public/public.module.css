@@ -1,3 +1,9 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .header {
   height: 80px;
   display: flex;
@@ -42,6 +48,7 @@
 
 .main {
   padding: 0 10rem;
+  flex: 1;
 }
 
 .footer {

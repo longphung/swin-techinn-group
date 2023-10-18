@@ -1,5 +1,5 @@
 import React from "react";
-import { marked } from "marked";
+import ClinicsCloseToPostcode from "../../../components/ClinicsCloseToPostcode/ClinicsCloseToPostcode";
 
 const RecommendPage = async () => {
   const recommendPageRes = await fetch(
@@ -14,11 +14,14 @@ const RecommendPage = async () => {
   } = data;
 
   return (
-    <div
-      dangerouslySetInnerHTML={{
-        __html: marked.parse(body),
-      }}
-    />
+    <div>
+      <div
+        dangerouslySetInnerHTML={{
+          __html: body,
+        }}
+      />
+      <ClinicsCloseToPostcode />
+    </div>
   );
 };
 

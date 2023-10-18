@@ -14,7 +14,11 @@ const FaqPage = async () => {
   return qaPair.map(({ question, answer, id }) => (
     <div key={id}>
       <h2>{question}</h2>
-      <p>{answer}</p>
+      <div
+        dangerouslySetInnerHTML={{
+          __html: answer,
+        }}
+      />
     </div>
   ));
 };
