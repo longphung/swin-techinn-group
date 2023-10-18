@@ -1,5 +1,7 @@
 import "./style.css";
 import ToastContainer from "components/ToastContainer/ToastContainer";
+import Analytics from "components/Analytics/Analytics";
+import React from "react";
 
 /* eslint-disable */
 export const metadata = {
@@ -27,6 +29,7 @@ export default function RootLayout({ children }) {
       <body>
         {children}
         <ToastContainer />
+        <Analytics />
       </body>
     </html>
   );
