@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useTransition } from "react";
+import { toast } from "react-toastify";
 import Link from "next/link";
 import classes from "./Login.module.css";
 import Button from "../Button/Button";
@@ -17,10 +18,16 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const { email, password } = e.target.elements;
-    await supabase.auth.signInWithPassword({
+    const result = await supabase.auth.signInWithPassword({
       email: email.value,
       password: password.value,
     });
+    if (result.error) {
+      toast.error(result.error.message, {
+        type: "error",
+      });
+      return;
+    }
     startTransition(() => router.push("/admin"));
     startTransition(() => router.refresh());
   };
