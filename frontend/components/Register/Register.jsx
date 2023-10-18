@@ -79,10 +79,10 @@ const Register = () => {
           />
         </div>
         <div>
-          <label>Suburb</label>
+          <label>Postcode</label>
           <input
             type="text"
-            name="suburb"
+            name="postcode"
             value={formData.suburb}
             onChange={handleChange}
             required

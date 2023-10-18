@@ -35,7 +35,6 @@ const UsersPage = async () => {
       type: "error",
     });
   }
-  console.log(data);
   const dataToShow =
     data.map((x) => ({
       ...x,

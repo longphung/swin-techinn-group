@@ -1,6 +1,7 @@
 import React from "react";
 import classes from "./public.module.css";
 import Link from "next/link";
+import TopBarLogin from "components/TopBarLogin/TopBarLogin";
 
 const Public = async (props) => {
   const footerRes = await fetch(
@@ -10,35 +11,30 @@ const Public = async (props) => {
   if (error) {
     return <div>Failed to load footer</div>;
   }
+  const headerRes = await fetch(
+    `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/headers`,
+  );
+  const { data: headerData, error: headerError } = await headerRes.json();
+  if (headerError) {
+    console.error(headerError);
+    return <div>Failed to load header</div>;
+  }
   const {
     attributes: { FooterColumn },
   } = data;
   return (
-    <>
+    <div className={classes.wrapper}>
       <header className={classes.header}>
-        <div className={classes.logo}>Burnet Institute</div>
+        <Link className={classes.logo} href="/">
+          Burnet Institute
+        </Link>
         <ul className={classes.navLinks}>
-          <li>
-            <Link href="/">Home</Link>
-          </li>
-          <li>
-            <a href="/about">About</a>
-          </li>
-          <li>
-            <a href="/contact">Contact</a>
-          </li>
-          <li>
-            <Link href="/faq">FAQ</Link>
-          </li>
-          <li>
-            <a href="#">How to Use</a>
-          </li>
-          <li>
-            <a href="#">Tests</a>
-          </li>
-          <li>
-            <Link href="/login">Login</Link>
-          </li>
+          {headerData.map(({ attributes: { name, linkTo } }) => (
+            <li key={name}>
+              <Link href={linkTo}>{name}</Link>
+            </li>
+          ))}
+          <TopBarLogin />
         </ul>
       </header>
 
@@ -62,7 +58,7 @@ const Public = async (props) => {
           </div>
         ))}
       </footer>
-    </>
+    </div>
   );
 };
 

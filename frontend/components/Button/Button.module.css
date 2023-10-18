@@ -21,6 +21,7 @@
 .button:hover {
   background: #ff8b5c;
   transform: scale(1.05);
+  cursor: pointer;
 }
 
 .button:active {
