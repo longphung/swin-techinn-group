@@ -7,10 +7,12 @@ import { AgGridReact } from "ag-grid-react";
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import { toast } from "react-toastify";
 import Swal from "sweetalert2";
+import { useRouter } from "next/navigation";
 
 const DeleteButton = (props) => {
   const supabase = createClientComponentClient();
   const [session, setSession] = useState({});
+  const router = useRouter();
 
   useEffect(() => {
     const getSession = async () => {
@@ -49,6 +51,7 @@ const DeleteButton = (props) => {
     toast(`User ${props.data.name} deleted`, {
       type: "success",
     });
+    router.refresh();
   };
 
   return (
@@ -63,6 +66,9 @@ const DeleteButton = (props) => {
 const UserTable = (props) => {
   const { data } = props;
   const supabase = createClientComponentClient();
+  const getRowId = useMemo(() => {
+    return (params) => params.data.id;
+  }, []);
 
   const [columnDefs] = useState([
     {
@@ -121,6 +127,7 @@ const UserTable = (props) => {
       type: "success",
     });
   };
+  console.log(data);
 
   return (
     <div className="ag-theme-material" style={{ height: 500 }}>
@@ -129,6 +136,7 @@ const UserTable = (props) => {
         rowData={data}
         defaultColDef={defaultColDef}
         onCellEditingStopped={handleCellEditingStopped}
+        getRowId={getRowId}
       />
     </div>
   );

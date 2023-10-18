@@ -15,7 +15,7 @@ const Register = () => {
     firstName: "",
     lastName: "",
     phoneNumber: "",
-    suburb: "",
+    postcode: "",
     gender: "male",
     password: "",
     confirmPassword: "",
@@ -79,11 +79,11 @@ const Register = () => {
           />
         </div>
         <div>
-          <label>Postcode</label>
+          <label htmlFor="postcode">Postcode</label>
           <input
             type="text"
             name="postcode"
-            value={formData.suburb}
+            value={formData.postcode}
             onChange={handleChange}
             required
           />
