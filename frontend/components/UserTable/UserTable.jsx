@@ -8,7 +8,7 @@ import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 
-const DeleteButton = (props) => {
+const DeleteButton = () => {
   return (
     <div>
       <button>Delete</button>
@@ -21,7 +21,7 @@ const UserTable = (props) => {
   const supabase = createClientComponentClient();
   const router = useRouter();
 
-  const [columnDefs, setColumnDefs] = useState([
+  const [columnDefs, _setColumnDefs] = useState([
     {
       field: "name",
     },

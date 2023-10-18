@@ -20,7 +20,7 @@ const TopBarLogin = () => {
       .catch((e) => {
         toast(e.message, { type: "error" });
       });
-  }, []);
+  }, [supabase.auth]);
   return session.data?.session ? (
     <li>
       <Link href="/admin">Dashboard</Link>
