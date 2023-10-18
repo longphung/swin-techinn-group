@@ -1,5 +1,5 @@
 import React from "react";
-import ClinicsCloseToPostcode from "../../../components/ClinicsCloseToPostcode/ClinicsCloseToPostcode";
+import ClinicsCloseToPostcode from "components/ClinicsCloseToPostcode/ClinicsCloseToPostcode";
 
 const RecommendPage = async () => {
   const recommendPageRes = await fetch(

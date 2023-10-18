@@ -1,6 +1,7 @@
 import React from "react";
 import classes from "./public.module.css";
 import Link from "next/link";
+import TopBarLogin from "components/TopBarLogin/TopBarLogin";
 
 const Public = async (props) => {
   const footerRes = await fetch(
@@ -24,16 +25,16 @@ const Public = async (props) => {
   return (
     <div className={classes.wrapper}>
       <header className={classes.header}>
-        <div className={classes.logo}>Burnet Institute</div>
+        <Link className={classes.logo} href="/">
+          Burnet Institute
+        </Link>
         <ul className={classes.navLinks}>
           {headerData.map(({ attributes: { name, linkTo } }) => (
             <li key={name}>
               <Link href={linkTo}>{name}</Link>
             </li>
           ))}
-          <li>
-            <Link href="/login">Login</Link>
-          </li>
+          <TopBarLogin />
         </ul>
       </header>
 
