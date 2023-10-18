@@ -26,7 +26,7 @@ const Public = async (props) => {
     <div className={classes.wrapper}>
       <header className={classes.header}>
         <Link className={classes.logo} href="/">
-          Burnet Institute
+          HIVTestHub
         </Link>
         <ul className={classes.navLinks}>
           {headerData.map(({ attributes: { name, linkTo } }) => (
