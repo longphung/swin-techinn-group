@@ -1,28 +1,46 @@
 "use client";
 import React, { useState } from "react";
+import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 import classes from "./SubmitTest.module.css";
 
 import Button from "../Button/Button";
+import { toast } from "react-toastify";
 
 const SubmitTest = () => {
   const [date, setDate] = useState(new Date());
   const [result, setResult] = useState("");
+  const supabase = createClientComponentClient();
 
   const handleReset = () => {
     setDate(new Date());
     setResult("");
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const data = {
       date: date,
-      result: result,
+      result: result === "positive",
     };
-    console.log(data);
+    const userData = await supabase.auth.getSession();
+    const insertResult = await supabase.from("test_results").insert({
+      date_acknowledged: data.date.toISOString(),
+      test_results: data.result,
+      user_id: userData?.data.session?.user.id,
+    });
+    if (insertResult.error) {
+      console.log(insertResult.error);
+      toast(`Error submitting test result ${insertResult.error.message}`, {
+        type: "error",
+      });
+      return;
+    }
+    toast(`Successfully submitted test result`, {
+      type: "success",
+    });
   };
 
   return (
