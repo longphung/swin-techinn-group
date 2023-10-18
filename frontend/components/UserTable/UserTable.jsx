@@ -1,29 +1,75 @@
 "use client";
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 // AG Grid CSS
 import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-material.min.css";
 import { AgGridReact } from "ag-grid-react";
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
-import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
+import Swal from "sweetalert2";
 
-const DeleteButton = () => {
+const DeleteButton = (props) => {
+  const supabase = createClientComponentClient();
+  const [session, setSession] = useState({});
+
+  useEffect(() => {
+    const getSession = async () => {
+      const { data, error } = await supabase.auth.getSession();
+      if (error) {
+        console.log(error);
+        return;
+      }
+      setSession(data.session);
+    };
+    getSession();
+  }, [supabase.auth]);
+
+  const handleDelete = async () => {
+    const result = await Swal.fire({
+      title: `Deleting ${props.data.name}. Are you sure?`,
+      confirmButtonText: "Yes",
+      cancelButtonText: "No",
+      showCancelButton: true,
+    });
+    if (!result.isConfirmed) {
+      return;
+    }
+    const { error } = await supabase
+      .from("profiles")
+      .delete()
+      .eq("id", props.data.id);
+    await fetch(`/api/users?id=${props.data.id}`, {
+      method: "DELETE",
+    });
+    if (error) {
+      toast("Error deleting user: " + error.message, {
+        type: "error",
+      });
+    }
+    toast(`User ${props.data.name} deleted`, {
+      type: "success",
+    });
+  };
+
   return (
-    <div>
-      <button>Delete</button>
-    </div>
+    session.user?.id !== props.data.id && (
+      <div>
+        <button onClick={handleDelete}>Delete</button>
+      </div>
+    )
   );
 };
 
 const UserTable = (props) => {
   const { data } = props;
   const supabase = createClientComponentClient();
-  const router = useRouter();
 
-  const [columnDefs, _setColumnDefs] = useState([
+  const [columnDefs] = useState([
     {
-      field: "name",
+      field: "first_name",
+    },
+    {
+      field: "last_name",
     },
     {
       field: "created_at",
@@ -60,22 +106,21 @@ const UserTable = (props) => {
       colDef: { field },
       data,
     } = event;
-    try {
-      await supabase
-        .from("profiles")
-        .update({
-          [field]: data[field],
-        })
-        .eq("id", data.id);
-      toast("User profile updated", {
-        type: "success",
-      });
-      router.refresh();
-    } catch (e) {
-      toast("Error updating user profile: " + e.message, {
+    const { data: resData, error } = await supabase
+      .from("profiles")
+      .update({
+        [field]: data[field],
+      })
+      .eq("id", data.id);
+    console.log(resData, error);
+    if (error) {
+      toast("Error updating user profile: " + error.message, {
         type: "error",
       });
     }
+    toast("User profile updated", {
+      type: "success",
+    });
   };
 
   return (

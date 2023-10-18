@@ -63,6 +63,12 @@ const AdminLayout = async (props) => {
             method="post"
             className={classes.hiddenForm}
           />
+          <div>
+            <Link href="/" className={classes.plainButton}>
+              Home
+            </Link>
+          </div>
+          <br />
           <button type="submit" form="logout" className={classes.plainButton}>
             <i className="bx bxs-balloon"></i>Logout
           </button>
